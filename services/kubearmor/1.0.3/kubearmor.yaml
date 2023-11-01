@@ -10,7 +10,7 @@ spec:
       chart: kubearmor-operator
       sourceRef:
         kind: HelmRepository
-        name: kubearmor.github.io/charts
+        name: kubearmor-operator
         namespace: ${releaseNamespace}
       version: v1.0.3
   interval: 15s
