@@ -23,6 +23,6 @@ spec:
       retries: 30
   releaseName: kubearmor
   valuesFrom:
-    - kind: KubeArmorConfig
-      name: kubearmorconfigs.operator.kubearmor.com
+    - kind: configMap
+      name: kubearmor-1.0.1-defaults
   targetNamespace: ${releaseNamespace}
