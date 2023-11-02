@@ -5,18 +5,7 @@ metadata:
   name: kubearmor-1.0.3-defaults
   namespace: ${releaseNamespace}
 data:
-  values.yaml: |-
-   autoDeploy: false
-
-   kubearmorOperator:
-     name: kubearmor-operator
-     image:
-       repository: kubearmor/kubearmor-operator
-       tag: latest
-     imagePullPolicy: IfNotPresent
-  
-   kubearmorConfig:
-    defaultCapabilitiesPosture: audit
-    defaultFilePosture: audit
-    defaultNetworkPosture: audit
-    defaultVisibility: process,network
+  values.yaml: |
+    ---
+    certManager:
+      enabled: true
