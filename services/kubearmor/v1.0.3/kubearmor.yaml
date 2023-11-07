@@ -2,17 +2,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: kubearmor-operator-v1.0.1
+  name: kubearmor-operator-v1.0.3
   namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
-      chart: kubearmor-operator-v1.0.1
+      chart: kubearmor-operator-v1.0.3
       sourceRef:
         kind: HelmRepository
         name: kubearmor.github.io/charts
         namespace: ${releaseNamespace}
-      version: v1.0.1
+      version: v1.0.3
   interval: 15s
   install:
     remediation:
