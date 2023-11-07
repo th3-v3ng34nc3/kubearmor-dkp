@@ -11,17 +11,17 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kubearmor.github.io/charts
-        namespace: ${releaseNamespace}
-      version: v1.0.3
+        namespace: ${workspaceNamespace}
+      version: 1.0.3
   interval: 15s
   install:
     remediation:
       retries: 30
-    createNamespace: yes
+    createNamespace: true
   upgrade:
     remediation:
       retries: 30
-  releaseName: kubearmor
+  releaseName: kubearmor-operator-v1.0.3
   valuesFrom:
     - kind: configMap
       name: kubearmor-1.0.3-defaults
