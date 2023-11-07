@@ -2,8 +2,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: kubearmor-operator-v1.0.3
-  namespace: ${releaseNamespace}
+  name: kubearmor.github.io/charts
+  namespace: ${workspaceNamespace}
 spec:
   interval: 10m
   timeout: 1m
